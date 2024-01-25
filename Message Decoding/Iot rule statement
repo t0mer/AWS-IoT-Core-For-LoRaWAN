@@ -1,0 +1,5 @@
+SELECT aws_lambda("arn:aws:lambda:[Full lambda arn]",
+                  {"PayloadData":PayloadData, 
+                  "WirelessDeviceId": WirelessDeviceId, 
+                   "WirelessMetadata": WirelessMetadata,"DECODER_NAME": topic()}) as transformed_payload, 
+        timestamp() as timestamp
